@@ -1,0 +1,1 @@
+{"name":"Local: Segment Tree Template","url":"/home/jyshdewangan/Desktop/DSA/Codes/Graphs/Trees/Segment Tree Template.cpp","tests":[{"id":1656269958176,"input":"5 2\n1 2 3 2 2\n1 2 2\n2 1 4","output":"2 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/jyshdewangan/Desktop/DSA/Codes/Graphs/Trees/Segment Tree Template.cpp","group":"local","local":true}

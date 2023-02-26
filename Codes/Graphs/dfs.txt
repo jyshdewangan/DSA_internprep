@@ -1,0 +1,40 @@
+Applications of Depth First Search
+->Find any path in the graph from source vertex  to all vertices.
+
+->Find lexicographical first path in the graph from source  to all vertices.
+
+->Check if a vertex in a tree is an ancestor of some other vertex
+
+->Find the lowest common ancestor (LCA) of two vertices.
+
+->Topological sorting
+
+->Check whether a given graph is acyclic and find cycles in a graph. (As mentioned above by counting back edges 
+    in every connected components).
+
+->Find strongly connected components in a directed graph
+
+
+// Simple use of colors and time in time out;
+// 0-> Not visited
+// 1-> Visited but not exited
+// 2-> Exited
+
+vector<vector<int>> adj; // graph represented as an adjacency list
+int n; // number of vertices
+
+vector<int> color;
+
+vector<int> time_in, time_out;
+int dfs_timer = 0;
+
+void dfs(int v) {
+    time_in[v] = dfs_timer++;
+    color[v] = 1;
+    for (int u : adj[v])
+        if (color[u] == 0)
+            dfs(u);
+    color[v] = 2;
+    time_out[v] = dfs_timer++;
+}
+

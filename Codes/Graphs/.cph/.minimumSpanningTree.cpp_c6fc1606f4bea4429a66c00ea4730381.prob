@@ -1,0 +1,1 @@
+{"name":"Local: minimumSpanningTree","url":"/home/jyshdewangan/Desktop/DSA/Codes/Graphs/minimumSpanningTree.cpp","tests":[{"id":1655198184301,"input":"5 6\n1 2 3\n2 3 5\n2 4 2\n3 4 8\n5 1 7\n5 4 4","output":"14"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/jyshdewangan/Desktop/DSA/Codes/Graphs/minimumSpanningTree.cpp","group":"local","local":true}

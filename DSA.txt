@@ -1,0 +1,26 @@
+* MODULO ARITHEMATIC
+-> A mod C = b mod C
+-> C divides A-B [C|(A-B)]
+->A=B+kC, for some value k
+
+(A+B)%C = (A%C+B%C)%C
+(A-B)%C = (A%C-B%C)%C
+(A*B)%C = (A%C*B%C)%C
+(A^B)%C = ((A%C)^B)%C
+(A/B)%C = (AB^-1)%C = ((A%C)*(B^(C-1)%C))%C
+
+
+Binary Exponentiation (Calculate A^B)
+convert B to binary 
+-> keep on dividing B by 2 in each loop
+-> Keep on squaring A^2^0 ,whenever 1 comes take the current A, otherwise dont
+
+*by dividing by 2, binary form reduces its last digit* eg: 11100011 ->/2-> 1110001
+
+FOR USING MOD: 
+-> Do mod at each step
+-> [(ans%mod)+mod]%mod ---- Removes all negative nos. from answer. 
+
+
+lower_bound -> left-most element >=val
+upper_bound -> left-most element >val

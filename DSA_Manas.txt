@@ -1,0 +1,62 @@
+Platforms for coding tests:-
+hackerrank
+hackerearth
+mattl
+codility
+codesignal 
+amcat
+codubes
+
+memset(arr,0,size(arr)); O(n)
+assigns all values of array to 0
+we can also assign -1, but cannot assign any other value like -2,1,2,3 etc because memset works bit by bit. 
+we can assign character values using mmemset, eg. memset(arr,'t',size(arr));
+memset is also used to clear off the globally declared array before going to next test case, otherwise the array will carry-over the data of previous testcase.
+
+Lower_bound :-  1) Iterator to the first element >= x.
+		2) No. of elements < x.
+Upper_bound :-  1) Iterator to the first element >  x.
+		2) No. of elements <= x.
+
+MEX = Minimum Excluded Number = Smallest intezer that is not present in a set, array, etc.
+
+Binary Search -
+
+		int arr[]={0,0,0,0,0,0,0,0,0,1,1};
+		int low  = 0, high = 9, ans = -1;
+		
+		while(low<=high){
+			int mid = ( low + high ) / 2;
+			if(arr[mid]==1){
+				ans = mid;
+				high = mid - 1 ;
+			}
+			else{
+				low = mid + 1 ; 
+			}
+		}
+
+For sorting pairs using Comparator functions :-
+
+int comp(pair<int,int> a , pair<int,int> b){
+	//non decreasining order
+	return a.first + a.second < b.first + b.second; 
+}
+sort(v.begin(),v.end(),comp);
+
+X is binary no. 101011010
+X % 2^7 = last 7 digits of binary no. = 1011010
+
+n is number in decimal format, then it has log2(n) bits
+
+predefined bit manipulation functions
+__builtin_popcountll
+__builtin_clz(x)
+__builtin_ctz(x)
+
+(a&b) + (a|b) = a+b
+
+Contribution technique:-
+Sum of all elements of all subarrays in an array:- 
+ sum+= arr[i]*(i+1)*(n-i);
+//(i+1)*(n-i) is the frequency of i'th element if we consider all subarrays

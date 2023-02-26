@@ -1,0 +1,80 @@
+* MODULO ARITHEMATIC
+-> A mod C = b mod C
+-> C divides A-B [C|(A-B)]
+->A=B+kC, for some value k
+
+(A+B)%C = (A%C+B%C)%C
+(A-B)%C = (A%C-B%C)%C
+(A*B)%C = (A%C*B%C)%C
+(A^B)%C = ((A%C)^B)%C
+(A/B)%C = (AB^-1)%C = ((A%C)*(B^(C-1)%C))%C
+
+
+Binary Exponentiation (Calculate A^B)
+convert B to binary 
+-> keep on dividing B by 2 in each loop
+-> Keep on squaring A^2^0 ,whenever 1 comes take the current A, otherwise dont
+
+*by dividing by 2, binary form reduces its last digit* eg: 11100011 ->/2-> 1110001
+
+FOR USING MOD: 
+-> Do mod at each step
+-> [(ans%mod)+mod]%mod ---- Removes all negative nos. from answer. 
+
+
+lower_bound -> left-most element >=val
+upper_bound -> left-most element >val
+
+
+if(a() && b() && c()) -> this operates from left to right, if anyone from starting gets one false, it terminates
+if(a() & b() & c()) -> it first evaluates all expressions then takes bitwise AND.
+
+if(a() || b() || c()) -> this operates from left to right, if anyone from starting gets one true, it terminates
+if(a() | b() | c()) -> it first evaluates all expressions then takes bitwise OR.
+
+
+// Storing first two maxes of all given values in array
+int max1=-1,max2=-1;
+for(auto ch:g[node]){
+    if(indp[ch]>max1){
+        max2=max1;
+        max1=indp[ch];
+    }else if(indp[ch]>max2){
+        max2=indp[ch];
+    }
+}
+
+
+Sliding window:
+
+int maxSum(int arr[], int n, int k)
+{
+    // n must be greater
+    if (n < k) {
+        cout << "Invalid";
+        return -1;
+    }
+  
+    // Compute sum of first window of size k
+    int max_sum = 0;
+    for (int i = 0; i < k; i++)
+        max_sum += arr[i];
+  
+    // Compute sums of remaining windows by
+    // removing first element of previous
+    // window and adding last element of
+    // current window.
+    int window_sum = max_sum;
+    for (int i = k; i < n; i++) {
+        window_sum += arr[i] - arr[i - k];
+        max_sum = max(max_sum, window_sum);
+    }
+  
+    return max_sum;
+}
+
+
+int gcd(int a,int b){
+	if(a==0 || b==0) return a^b;
+	return gcd(b,a%b);
+}
